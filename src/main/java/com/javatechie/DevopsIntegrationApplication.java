@@ -13,6 +13,12 @@ import javax.annotation.PostConstruct;
 @RestController
 public class DevopsIntegrationApplication {
 
+	public static Logger logger = LoggerFactory.getLogger(DevopsIntegrationApplication.class);
+
+	@PostConstruct
+	public void init() {
+		logger.info("Application started");
+	}
 
 	@GetMapping
 	public String message(){
